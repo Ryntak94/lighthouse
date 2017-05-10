@@ -126,15 +126,18 @@ class DetailsRenderer {
     const theadElem = this._dom.createChildOf(tableElem, 'thead');
     const theadTrElem = this._dom.createChildOf(theadElem, 'tr');
 
-    for (const heading of details.itemHeaders) {
-      this._dom.createChildOf(theadTrElem, 'th').appendChild(this.render(heading));
-    }
+    details.itemHeaders.forEach((heading, index) => {
+      const itemType = details.items[0][index].type;
+      const classes = `lh-table-column--${itemType}`;
+      this._dom.createChildOf(theadTrElem, 'th', classes).appendChild(this.render(heading));
+    });
 
     const tbodyElem = this._dom.createChildOf(tableElem, 'tbody');
     for (const row of details.items) {
       const rowElem = this._dom.createChildOf(tbodyElem, 'tr');
       for (const columnItem of row) {
-        this._dom.createChildOf(rowElem, 'td').appendChild(this.render(columnItem));
+        const classes = `lh-table-column--${columnItem.type}`;
+        this._dom.createChildOf(rowElem, 'td', classes).appendChild(this.render(columnItem));
       }
     }
     return element;
