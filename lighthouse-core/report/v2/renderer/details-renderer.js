@@ -127,8 +127,8 @@ class DetailsRenderer {
     const theadTrElem = this._dom.createChildOf(theadElem, 'tr');
 
     for (const heading of details.itemHeaders) {
-      const styleAs = heading.styleAs || 'default';
-      const classes = `lh-table-column--${styleAs}`;
+      const styleClass = heading.styleClass || 'default';
+      const classes = `lh-table-column--${styleClass}`;
       this._dom.createChildOf(theadTrElem, 'th', classes).appendChild(this.render(heading));
     }
 
@@ -136,8 +136,8 @@ class DetailsRenderer {
     for (const row of details.items) {
       const rowElem = this._dom.createChildOf(tbodyElem, 'tr');
       for (const columnItem of row) {
-        const styleAs = columnItem.styleAs || 'default';
-        const classes = `lh-table-column--${styleAs}`;
+        const styleClass = columnItem.styleClass || 'default';
+        const classes = `lh-table-column--${styleClass}`;
         this._dom.createChildOf(rowElem, 'td', classes).appendChild(this.render(columnItem));
       }
     }
@@ -194,7 +194,7 @@ if (typeof module !== 'undefined' && module.exports) {
 /**
  * @typedef {{
  *     type: string,
- *     styleAs: (string|undefined),
+ *     styleClass: (string|undefined),
  *     text: (string|undefined)
  * }}
  */

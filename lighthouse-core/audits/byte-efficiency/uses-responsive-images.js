@@ -113,8 +113,8 @@ class UsesResponsiveImages extends ByteEfficiencyAudit {
         .filter(item => item.wastedBytes > IGNORE_THRESHOLD_IN_BYTES);
 
     const headings = [
-      {key: 'preview', itemType: 'thumbnail', text: '', styleAs: 'preview'},
-      {key: 'url', itemType: 'url', text: 'URL', styleAs: 'url'},
+      {key: 'preview', itemType: 'thumbnail', text: '', styleClass: 'preview'},
+      {key: 'url', itemType: 'url', text: 'URL', styleClass: 'url'},
       {key: 'totalKb', itemType: 'text', text: 'Original'},
       {key: 'potentialSavings', itemType: 'text', text: 'Potential Savings'},
     ];

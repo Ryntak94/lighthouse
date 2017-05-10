@@ -140,18 +140,18 @@ describe('DetailsRenderer', () => {
         type: 'table',
         header: 'View Items',
         itemHeaders: [
-          {type: 'text', text: 'First', styleAs: 'custom'},
+          {type: 'text', text: 'First', styleClass: 'custom'},
           {type: 'text', text: 'Second'},
           {type: 'text', text: 'Preview'},
         ],
         items: [
           [
-            {type: 'text', text: 'value A.1', styleAs: 'custom'},
+            {type: 'text', text: 'value A.1', styleClass: 'custom'},
             {type: 'text', text: 'value A.2'},
             {type: 'thumbnail', url: 'http://example.com/image.jpg', mimeType: 'image/jpeg'},
           ],
           [
-            {type: 'text', text: 'value B.1', styleAs: 'custom'},
+            {type: 'text', text: 'value B.1', styleClass: 'custom'},
             {type: 'text', text: 'value B.2'},
             {type: 'thumbnail', url: 'unknown'},
           ],
@@ -163,8 +163,10 @@ describe('DetailsRenderer', () => {
       assert.ok(el.querySelector('img'), 'did not render recursive items');
       assert.equal(el.querySelectorAll('th').length, 3, 'did not render header items');
       assert.equal(el.querySelectorAll('td').length, 6, 'did not render table cells');
-      assert.equal(el.querySelectorAll('.lh-table-column--default').length, 6, 'styleAs not set');
-      assert.equal(el.querySelectorAll('.lh-table-column--custom').length, 3, 'styleAs not set');
+      assert.equal(el.querySelectorAll('.lh-table-column--default').length, 6,
+          'styleClass not set');
+      assert.equal(el.querySelectorAll('.lh-table-column--custom').length, 3,
+          'styleClass not set');
     });
   });
 });

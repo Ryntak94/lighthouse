@@ -81,7 +81,7 @@ class Audit {
 
         return {
           type: heading.itemType,
-          styleAs: heading.styleAs,
+          styleClass: heading.styleClass,
           text: value
         };
       });
@@ -96,7 +96,7 @@ class Audit {
   static makeV2TableHeaders(headings) {
     return headings.map(heading => ({
       type: 'text',
-      styleAs: heading.styleAs,
+      styleClass: heading.styleClass,
       text: heading.text
     }));
   }
@@ -164,6 +164,7 @@ module.exports = Audit;
  *   key: string,
  *   itemType: string,
  *   text: string,
+ *   styleClass: (string|undefined),
  * }>}
  */
 Audit.Headings; // eslint-disable-line no-unused-expressions
