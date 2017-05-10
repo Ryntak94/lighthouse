@@ -38,6 +38,10 @@
   --lh-score-highlight-bg: #fafafa;
   --lh-score-icon-background-size: 24px;
   --lh-score-margin: calc(var(--default-padding) / 2);
+
+  --lh-table-header-bg: #ccc;
+  --lh-table-higlight-bg: #fafafa;
+
   --lh-sparkline-height: 10px;
   --lh-audit-score-width: 35px;
   --lh-category-score-width: 60px;
@@ -609,11 +613,11 @@ summary.lh-passed-audits-summary::-webkit-details-marker {
 }
 
 .lh-table thead {
-  background: #ccc;
+  background: var(--lh-table-header-bg);
 }
 
 .lh-table tbody tr:nth-child(even) {
-  background-color: #fafafa;
+  background-color: var(--lh-table-higlight-bg);
 }
 
 .lh-table th,
