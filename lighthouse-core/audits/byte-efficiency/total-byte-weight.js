@@ -86,7 +86,7 @@ class TotalByteWeight extends ByteEfficiencyAudit {
         const score = 100 * distribution.computeComplementaryPercentile(totalBytes);
 
         const headings = [
-          {key: 'url', itemType: 'url', text: 'URL', styleClass: 'url'},
+          {key: 'url', itemType: 'url', text: 'URL', styleAs: 'url'},
           {key: 'totalKb', itemType: 'text', text: 'Total Size'},
           {key: 'totalMs', itemType: 'text', text: 'Transfer Time'},
         ];

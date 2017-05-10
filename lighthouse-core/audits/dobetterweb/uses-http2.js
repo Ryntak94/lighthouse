@@ -72,7 +72,7 @@ class UsesHTTP2Audit extends Audit {
       }
 
       const headings = [
-        {key: 'url', itemType: 'url', text: 'URL', styleClass: 'url'},
+        {key: 'url', itemType: 'url', text: 'URL', styleAs: 'url'},
         {key: 'protocol', itemType: 'text', text: 'Protocol'},
       ];
       const details = Audit.makeV2TableDetails(headings, resources);

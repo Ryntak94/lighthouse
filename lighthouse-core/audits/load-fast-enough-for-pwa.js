@@ -88,7 +88,7 @@ class LoadFastEnough4Pwa extends Audit {
         const recordsWithLatencies = allRequestLatencies.filter(val => val !== undefined);
 
         const details = Audit.makeV2TableDetails([
-          {key: 'url', itemType: 'url', text: 'URL', styleClass: 'url'},
+          {key: 'url', itemType: 'url', text: 'URL', styleAs: 'url'},
           {key: 'latency', itemType: 'text', text: 'Latency (ms)'},
         ], recordsWithLatencies);
 

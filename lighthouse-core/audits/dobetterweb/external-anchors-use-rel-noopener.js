@@ -72,7 +72,7 @@ class ExternalAnchorsUseRelNoopenerAudit extends Audit {
       });
 
     const headings = [
-      {key: 'href', itemType: 'url', text: 'URL', styleClass: 'url'},
+      {key: 'href', itemType: 'url', text: 'URL'},
       {key: 'target', itemType: 'text', text: 'Target'},
       {key: 'rel', itemType: 'text', text: 'Rel'},
     ];
