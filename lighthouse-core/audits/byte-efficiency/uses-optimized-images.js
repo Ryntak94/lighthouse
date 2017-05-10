@@ -121,8 +121,8 @@ class UsesOptimizedImages extends ByteEfficiencyAudit {
     }
 
     const headings = [
-      {key: 'preview', itemType: 'thumbnail', text: ''},
-      {key: 'url', itemType: 'url', text: 'URL'},
+      {key: 'preview', itemType: 'thumbnail', text: '', styleAs: 'preview'},
+      {key: 'url', itemType: 'url', text: 'URL', styleAs: 'url'},
       {key: 'totalKb', itemType: 'text', text: 'Original'},
       {key: 'webpSavings', itemType: 'text', text: 'Savings as WebP'},
       {key: 'jpegSavings', itemType: 'text', text: 'Savings as JPEG'},

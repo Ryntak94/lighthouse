@@ -49,7 +49,7 @@ class NoDocWriteAudit extends ViolationAudit {
     const results = ViolationAudit.getViolationResults(artifacts, /document\.write/);
 
     const headings = [
-      {key: 'url', itemType: 'url', text: 'URL'},
+      {key: 'url', itemType: 'url', text: 'URL', styleAs: 'url'},
       {key: 'label', itemType: 'text', text: 'Location'},
     ];
     const details = ViolationAudit.makeV2TableDetails(headings, results);

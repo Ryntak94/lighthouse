@@ -602,6 +602,38 @@ summary.lh-passed-audits-summary::-webkit-details-marker {
 
 .lh-table {
   --image-preview-size: 24px;
+  border: 1px solid var(--report-secondary-border-color);
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.lh-table thead {
+  background: #ccc;
+}
+
+.lh-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.lh-table th,
+.lh-table td {
+  padding: var(--default-padding);
+  overflow: auto;
+}
+
+.lh-table-column--default {
+  text-align: right;
+}
+
+.lh-table-column--preview {
+  width: 40px;
+}
+
+.lh-table-column--url {
+  text-align: left;
+  min-width: 250px;
+  white-space: nowrap;
 }
 
 .lh-thumbnail {
