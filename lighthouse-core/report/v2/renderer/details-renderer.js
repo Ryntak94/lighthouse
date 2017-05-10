@@ -127,18 +127,14 @@ class DetailsRenderer {
     const theadTrElem = this._dom.createChildOf(theadElem, 'tr');
 
     for (const heading of details.itemHeaders) {
-      const styleAs = heading.styleAs || 'default';
-      const classes = `lh-table-column--${styleAs}`;
-      this._dom.createChildOf(theadTrElem, 'th', classes).appendChild(this.render(heading));
+      this._dom.createChildOf(theadTrElem, 'th').appendChild(this.render(heading));
     }
 
     const tbodyElem = this._dom.createChildOf(tableElem, 'tbody');
     for (const row of details.items) {
       const rowElem = this._dom.createChildOf(tbodyElem, 'tr');
       for (const columnItem of row) {
-        const styleAs = columnItem.styleAs || 'default';
-        const classes = `lh-table-column--${styleAs}`;
-        this._dom.createChildOf(rowElem, 'td', classes).appendChild(this.render(columnItem));
+        this._dom.createChildOf(rowElem, 'td').appendChild(this.render(columnItem));
       }
     }
     return element;
@@ -194,7 +190,6 @@ if (typeof module !== 'undefined' && module.exports) {
 /**
  * @typedef {{
  *     type: string,
- *     styleAs: (string|undefined),
  *     text: (string|undefined)
  * }}
  */

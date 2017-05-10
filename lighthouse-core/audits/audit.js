@@ -81,7 +81,6 @@ class Audit {
 
         return {
           type: heading.itemType,
-          styleAs: heading.styleAs,
           text: value
         };
       });
@@ -96,7 +95,6 @@ class Audit {
   static makeV2TableHeaders(headings) {
     return headings.map(heading => ({
       type: 'text',
-      styleAs: heading.styleAs,
       text: heading.text
     }));
   }

@@ -91,7 +91,7 @@ class ResponsesAreCompressed extends ByteEfficiencyAudit {
 
     let debugString;
     const headings = [
-      {key: 'url', itemType: 'url', text: 'Uncompressed resource URL', styleAs: 'url'},
+      {key: 'url', itemType: 'url', text: 'Uncompressed resource URL'},
       {key: 'totalKb', itemType: 'text', text: 'Original'},
       {key: 'potentialSavings', itemType: 'text', text: 'GZIP Savings'},
     ];

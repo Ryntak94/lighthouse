@@ -49,7 +49,7 @@ class NotificationOnStart extends ViolationAudit {
     const results = ViolationAudit.getViolationResults(artifacts, /notification permission/);
 
     const headings = [
-      {key: 'url', itemType: 'url', text: 'URL', styleAs: 'url'},
+      {key: 'url', itemType: 'url', text: 'URL'},
       {key: 'label', itemType: 'text', text: 'Location'},
     ];
     const details = ViolationAudit.makeV2TableDetails(headings, results);

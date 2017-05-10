@@ -71,12 +71,6 @@ class UsesHTTP2Audit extends Audit {
         displayValue = `${resources.length} request was not handled over h2`;
       }
 
-      const headings = [
-        {key: 'url', itemType: 'url', text: 'URL', styleAs: 'url'},
-        {key: 'protocol', itemType: 'text', text: 'Protocol'},
-      ];
-      const details = Audit.makeV2TableDetails(headings, resources);
-
       return {
         rawValue: resources.length === 0,
         displayValue: displayValue,
@@ -86,8 +80,7 @@ class UsesHTTP2Audit extends Audit {
             results: resources,
             tableHeadings: {url: 'URL', protocol: 'Protocol'}
           }
-        },
-        details,
+        }
       };
     });
   }
